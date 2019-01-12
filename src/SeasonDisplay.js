@@ -24,12 +24,11 @@ const getSeason = (lat, month) => {
 const SeasonDisplay = (props) => {
   const season = getSeason(props.lat, new Date().getMonth());
   const {text, iconName } = seasonConfig[season];
-  console.log(iconName);
 
 
   return (
 <div className={`season-display ${season}`}>
-      <i className="snowflake icon" />
+      <i className={`icon-left massive ${iconName} icon`} />
       <h1>{text}</h1>
       <i className={`icon-right massive ${iconName} icon`} />
     </div>
